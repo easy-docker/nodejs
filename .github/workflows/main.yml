@@ -26,7 +26,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Hub
         run: |
-          docker build -f 16/puppeteer/Dockerfile -t ${{ env.IMAGE_NAME }}:16-puppeteer .
-          docker push ${{ env.IMAGE_NAME }}:16-puppeteer
           docker build -f 20/puppeteer/Dockerfile -t ${{ env.IMAGE_NAME }}:20-puppeteer .
           docker push ${{ env.IMAGE_NAME }}:20-puppeteer
